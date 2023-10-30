@@ -1,0 +1,22 @@
+{
+  "name": "moment2-javascriptbaserad_webbutveckling",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucasHSchuber/moment2-javascriptbaserad_webbutveckling.git"
+  },
+  "author": "Lucas Schuber",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucasHSchuber/moment2-javascriptbaserad_webbutveckling/issues"
+  },
+  "homepage": "https://github.com/LucasHSchuber/moment2-javascriptbaserad_webbutveckling#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
