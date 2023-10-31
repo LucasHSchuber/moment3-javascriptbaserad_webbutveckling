@@ -7,33 +7,19 @@ function getCourses() {
         .then(courses => {
             const coursesTable = document.getElementById('courses-table');
 
-            coursesTable.innerHTML = courses.map(course => `
-                <tr>
+            coursesTable.innerHTML = courses.map(course => 
+                `<tr>
                     <td>${course.courseId}</td>
                     <td>${course.courseName}</td>
                     <td>${course.coursePeriod}</td>
                     <td><button class="del-btn delete" onClick="deleteCourse(${course._id})" data-id="${course._id}">Radera</button></td>
-                </tr> `
+                </tr>`
             );
         })
         .catch(error => {
             console.error('Error fetching courses:', error);
         });
-
-    // const deleteButtons = document.querySelectorAll('.delete');
-
-
-    // deleteButtons.forEach(button => {
-    //     button.addEventListener('click', function() {
-    //         // Retrieve the data-id attribute value of the clicked button
-    //         const courseId = this.getAttribute('data-id');
-    //         // Perform actions based on courseId, such as deleting the corresponding course
-    //         deleteCourse(courseId);
-    //     });
-    // });
 }
-
-
 
 function deleteCourse(id) {
 
@@ -63,39 +49,23 @@ function deleteCourse(id) {
         });
 }
 
+// function reloadCourses() {
 
-// function deleteCourse(courseId) {
-
-//     fetch(`http://localhost:3000/api/courses/${courseId}`, {
-//         method: "DELETE",
-//         headers: {
-//             "content-type": "application/json",
-//         }
+//     console.log("ok!");
+//     fetch('http://localhost:3000/api/reload', {
+//         method: 'POST',
 //     })
-//         .then(Response => Response.json())
-//         .then(data => {
-
-//             console.log("workiiing!");
+//         .then(response => {
+//             if (response.ok) {
+//                 console.log('Courses reloaded successfully.');
+//                 getCourses(); // Reload courses after the reload request
+//             } else {
+//                 console.error('Failed to reload courses.');
+//             }
 //         })
-//         .catch(err => console.log(err))
-// }
-
-
-// async function deleteCourse(courseId) {
-//     try {
-//         const response = fetch(`http://localhost:3000/api/courses/${courseId}`, {
-//             method: 'DELETE',
+//         .catch(error => {
+//             console.error('Error reloading courses:', error);
 //         });
-
-//         if (response.ok) {
-//             console.log(`Course with ID ${courseId} deleted successfully.`);
-//             getCourses(); // Uppdatera kurser efter borttagning
-//         } else {
-//             console.error(`Failed to delete course with ID ${courseId}.`);
-//         }
-//     } catch (error) {
-//         console.error('Error deleting course:', error);
-//     }
 // }
 
 getCourses();
