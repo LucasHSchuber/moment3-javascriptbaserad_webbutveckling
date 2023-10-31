@@ -1,7 +1,7 @@
 "use strict";
 
 const express = require('express');
-const cors = require('cors'); // Import the cors package
+const cors = require('cors'); 
 const app = express();
 const PORT = 3000;
 
@@ -17,8 +17,7 @@ app.get('/api/courses', (req, res) => {
 });
 
 app.post('/api/reload', (req, res) => {
-  // You can reload your data here, for example, if you have it stored in a variable or a file.
-  // For demonstration purposes, I'm using the original data without the unnecessary nesting.
+
   courses = [
     { "_id": 1, "courseId": "DT162G", "courseName": "Javascript-baserad webbutveckling", "coursePeriod": 1 },
     { "_id": 2, "courseId": "IK060G", "courseName": "Projektledning", "coursePeriod": 1 },
@@ -35,15 +34,14 @@ app.post('/api/reload', (req, res) => {
 app.delete('/api/courses/:id', (req, res) => {
   const courseId = parseInt(req.params.id);
 
-  // Find the index of the course with the specified ID in the courses array
   const courseIndex = courses.findIndex(course => course._id === courseId);
 
   if (courseIndex !== -1) {
-    // If course with the specified ID is found, remove it from the courses array
+
     courses.splice(courseIndex, 1);
-    res.sendStatus(200); // Respond with success status (OK)
+    res.sendStatus(200); 
   } else {
-    res.status(404).json({ error: 'Course not found' }); // Respond with error status (Not Found)
+    res.status(404).json({ error: 'Course not found' }); 
   }
 });
 

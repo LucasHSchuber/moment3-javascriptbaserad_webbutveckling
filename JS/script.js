@@ -23,8 +23,6 @@ function getCourses() {
 
 function deleteCourse(id) {
 
-    console.log("working " + id);
-
     fetch(`http://localhost:3000/api/courses/${id}`, {
         method: "DELETE",
         headers: {
