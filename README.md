@@ -1,3 +1,3 @@
-## moment2 - Javascriptbaserad webbutveckling
+## moment3 - Javascriptbaserad webbutveckling
 ## Lucas Schuber
 ## Mittuniversitetet
