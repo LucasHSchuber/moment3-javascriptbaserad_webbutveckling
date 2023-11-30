@@ -1,17 +1,12 @@
-.wrapper{
-    margin: 5em 3em;
+body{
+ background-color: rgb(232, 232, 232);
+ color: rgb(20, 20, 20);
 }
 
-.del-btn{
-    background-color: red;
-    color:white;
-    border:none;
-    padding: 0.5em 1em;
-    transition: 0.2s;
+main{
+
 }
-.del-btn:hover{
-    background-color: rgb(0, 0, 0);
-    color:white;
-    border:none;
-    padding: 0.5em 1em;
+
+h1{
+
 }

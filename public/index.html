@@ -5,27 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Courses</title>
+
+  <!-- CSS style -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <h1>Courses</h1>
   <ul id="courses-list"></ul>
 
-  <script>
-    // Fetch courses from the server
-    fetch('http://localhost:3000/courses')
-      .then(response => response.json())
-      .then(courses => {
-        // Update the HTML with the received courses
-        const coursesList = document.getElementById('courses-list');
-        courses.forEach(course => {
-          const li = document.createElement('li');
-          li.textContent = `${course.courseId} - ${course.courseName} (Period ${course.coursePeriod})`;
-          coursesList.appendChild(li);
-        });
-      })
-      .catch(error => console.error('Error fetching courses:', error));
-  </script>
+
+
+  
+
+  <!-- JavaScript script -->
+  <script src="script.js"></script>
 </body>
 
 </html>
