@@ -8,12 +8,12 @@
 </head>
 
 <body>
-  <h1>Courses new</h1>
+  <h1>Courses</h1>
   <ul id="courses-list"></ul>
 
   <script>
     // Fetch courses from the server
-    fetch('http://localhost:3000/api/courses')
+    fetch('http://localhost:3000/courses')
       .then(response => response.json())
       .then(courses => {
         // Update the HTML with the received courses
