@@ -1,12 +1,35 @@
-body{
- background-color: rgb(232, 232, 232);
- color: rgb(20, 20, 20);
+body {
+    background-color: rgb(232, 232, 232);
+    color: rgb(20, 20, 20);
 }
 
-main{
-
+.submit-btn {
+    background-color: black;
+    color: white;
+    padding: 0.5em 1.2em;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
-h1{
+.submit-btn:hover {
+    background-color: rgb(63, 63, 63);
+}
 
+.del-btn {
+    background-color: rgb(255, 78, 78);
+    color: white;
+    padding: 0.5em 1.2em;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.del-btn:hover {
+    background-color: rgb(225, 2, 2);
+}
+
+.error{
+    color: rgb(255, 0, 0);
+    font-weight: 700;
 }
