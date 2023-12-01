@@ -1,7 +1,9 @@
 "use strict";
 
 
+//LOAD ALL COURSES ON START
 loadCourses();
+
 
 //FETCH COURSES FROM SERVER
 function loadCourses() {
@@ -12,10 +14,8 @@ function loadCourses() {
 
             const coursesList = document.getElementById('courses-list');
 
-            //clear first
+            //clear field first
             coursesList.innerHTML = "";
-
-            // Update the HTML with the received courses
 
             if (courses.length === 0) {
                 console.log("No data found in mongoDB");
@@ -25,6 +25,7 @@ function loadCourses() {
 
             courses.forEach(course => {
                 const li = document.createElement('li');
+                li.classList.add('course-link');
                 li.textContent =
                     `${course.courseId} - ${course.courseName} (Period ${course.coursePeriod})`;
 
@@ -101,7 +102,6 @@ function addCourse() {
 
 //DELETE COURSE FROM SERVER
 function deleteCourse(courseId) {
-    // Perform the delete request to your server
     fetch(`http://localhost:3000/courses/${courseId}`, {
         method: 'DELETE',
     })
@@ -123,6 +123,7 @@ function deleteCourse(courseId) {
 //ADD DATA TO SERVER
 function addData() {
 
+    //array with different courses
     const courseArray = [
         {
             courseId: "DT162G",
@@ -174,12 +175,6 @@ function addData() {
         coursePeriod: random.coursePeriod
     }
 
-    console.log(random.courseId);
-    console.log(random.courseName);
-    console.log(random.coursePeriod);
-    console.log(random);
-
-    // console.log(JSON.stringify(data)); // Log the payload for debugging
     fetch(`http://localhost:3000/courses`, {
         method: 'POST',
         headers: {

@@ -89,7 +89,7 @@ router.delete('/:id', getCourse, async (req, res) => {
 
 
 
-
+//getCourse method
 async function getCourse(req, res, next) {
     try {
         course = await Course.findById(req.params.id)

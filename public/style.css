@@ -3,6 +3,9 @@ body {
     color: rgb(20, 20, 20);
 }
 
+.course-link{
+    padding: 0.3em 0;
+}
 .submit-btn {
     background-color: black;
     color: white;
@@ -23,6 +26,7 @@ body {
     border: none;
     cursor: pointer;
     transition: 0.2s;
+    margin-left:1em;
 }
 
 .del-btn:hover {

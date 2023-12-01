@@ -1,9 +1,10 @@
 require('dotenv').config()
 
 const express = require('express')
-const cors = require('cors'); // Import the cors package
+const cors = require('cors'); 
 const app = express()
 const mongoose = require('mongoose')
+
 // Use cors middleware
 app.use(cors());
 
